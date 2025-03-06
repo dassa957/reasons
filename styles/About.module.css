@@ -1,0 +1,141 @@
+.container{
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    align-items: flex-start;
+    width: 40%;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.left h1, .left p{
+    display: none;
+}
+
+.right{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 60%;
+    padding-left: 3rem;
+}
+
+.left img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.heading{
+    font-size: 3rem;
+    color: var(--primary);
+    font-family: "Kanit";
+    font-weight: 600;
+}
+
+.line p{
+    color: transparent;
+    font-size: .2rem;
+}
+
+.line{
+    background: linear-gradient(90deg, var(--accent), var(--secondary));
+    max-width: 350px;
+    width: 100%;
+    border-radius: 50px;
+    margin-bottom: 3rem;
+}
+
+.des{
+    font-size: 1rem;
+    color: var(--secondary);
+    font-weight: 400;
+    padding-right: 4rem;
+    line-height: 1.6em;
+}
+
+.btn{
+    font-size: 1rem;
+    color: var(--primary);
+    background: var(--accent);
+    padding: .85rem 3rem;
+    border-radius: 100px;
+    margin-top: 2rem;
+    transition: transform background .2s ease-in-out;
+}
+
+.btnContainer{
+    margin-top: 2rem;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    background: var(--hover);
+}
+
+@media(max-width: 860px){
+    .container{
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .left, .right{
+        width: 100%;
+        padding: 0;
+    }
+
+    .left h1{
+        font-size: 2.5rem;
+        color: var(--primary);
+        font-family: "Kanit";
+        font-weight: 600;
+    }
+
+    .left h1, .left p{
+        display: block;
+    }
+
+    .left .line p{
+        color: transparent;
+        font-size: .2rem;
+    }
+
+    .left .line{
+        background: linear-gradient(90deg, var(--accent), var(--secondary));
+        max-width: 350px;
+        width: 100%;
+        border-radius: 50px;
+        margin-bottom: 2rem;
+    }
+
+    .right h1, .right .line, .right .line p{
+        display: none;
+    }
+
+    .des{
+        padding: 0;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 720px){
+    .container{
+        padding: 2rem;
+    }
+
+    .left .heading{
+        font-size: 2rem;
+    }
+
+    .btn{
+        padding: .7rem 2rem
+    }
+
+}

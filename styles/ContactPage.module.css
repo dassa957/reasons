@@ -1,0 +1,232 @@
+.container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 3rem;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 2rem 0;
+    flex-direction: column;
+}
+
+.heading{
+    font-size: 3rem;
+    font-family: "Kanit";
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: .5rem;
+    text-align: left;
+}
+
+.line p{
+    color: transparent;
+    font-size: .2rem;
+}
+
+.line{
+    background: linear-gradient(90deg, var(--accent), var(--secondary));
+    max-width: 350px;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.grid{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+
+.left, .right{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 45%;
+}
+
+.formContainer{
+    width: 100%;
+}
+
+.formContainer form{
+    width: 80%;
+}
+
+.box{
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: .5rem 0;
+}
+
+.box label{
+    font-size: 1rem;
+    color: #cacaca;
+    text-align: left;
+    font-weight: 400;
+    margin: .2rem 0;
+}
+
+.box input,
+.box textarea{
+    font-size: 1rem;
+    color: var(--secondary);
+    padding: 1rem;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.box textarea{
+    min-height: 120px;
+    resize: none;
+}
+
+.btn{
+    font-size: 1.1rem;
+    color: var(--primary);
+    background: var(--accent);
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.right .box p{
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin: .5rem 0;
+}
+
+.box input:focus,
+.box textarea:focus{
+    border-color: var(--accent);
+}
+
+.btn:hover{
+    background: var(--hover);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(2.5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Centered message box */
+.dbox {
+    max-width: 300px;
+    background: #ddd;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1000000;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.dbox img {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.mtext {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.dbox p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.dbtn{
+    width: 100%;
+    color: #fff;
+    background: #333;
+    padding: .65rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+.dbtn:hover{
+    color: #333;
+    background: transparent;
+}
+
+@media (max-width: 960px){
+    .heading{
+        font-size: 2.5rem;
+    }
+
+    .left, .right{
+        width: 48%;
+    }
+
+    .grid{
+        gap: 0;
+    }
+
+    .formContainer form{
+        width: 100%;
+    }
+}
+
+@media (max-width: 860px){
+    .container{
+        padding: 7rem 2rem;
+    }
+}
+
+@media (max-width: 760px){
+    .container{
+        padding: 6rem 2rem;
+    }
+
+    .grid{
+        flex-direction: column;
+    }
+
+    .left, .right{
+        width: 100%;
+    }
+
+    .heading{
+        font-size: 2rem;
+    }
+
+    .right{
+        margin-top: 1rem;
+    }
+
+    .btn{
+        padding: .9rem 2.5rem;
+    }
+
+}

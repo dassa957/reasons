@@ -1,0 +1,26 @@
+.container{
+    padding: 5rem 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.des{
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin: 1rem 0;
+}
+
+.link{
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 760px){
+    .container{
+        padding: 2rem;
+    }
+}
